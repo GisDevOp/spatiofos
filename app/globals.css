@@ -1,0 +1,143 @@
+@import "tailwindcss";
+
+:root {
+  --navy: #0b1e35;
+  --navy-deep: #071528;
+  --navy-mid: #112540;
+  --green: #3bbf5a;
+  --green-dark: #2a9e47;
+  --green-pale: #e8f7ec;
+  --green-mid: #c5ecd0;
+  --white: #ffffff;
+  --offwhite: #f4f7fb;
+  --slate: #4e6880;
+  --muted: #8ba3b8;
+  --border: rgba(59, 191, 90, 0.15);
+  --border-navy: rgba(255, 255, 255, 0.09);
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 14px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body), "Inter", sans-serif;
+  font-size: 16px;
+  line-height: 1.7;
+  color: var(--navy);
+  background: var(--white);
+  -webkit-font-smoothing: antialiased;
+}
+
+.font-display {
+  font-family: var(--font-display), "Space Grotesk", sans-serif;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.section {
+  padding: 4.5rem 0;
+}
+
+.section--dark {
+  background: var(--navy);
+}
+
+.section--light {
+  background: var(--offwhite);
+}
+
+.section--green {
+  background: var(--green);
+}
+
+.label {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 1.8px;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+  color: var(--green);
+}
+
+.label--light {
+  color: rgba(255, 255, 255, 0.55);
+}
+
+.section-title {
+  font-family: var(--font-display), "Space Grotesk", sans-serif;
+  font-size: clamp(24px, 3vw, 34px);
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  line-height: 1.2;
+  color: var(--navy);
+  margin-bottom: 0.9rem;
+}
+
+.section-title--light {
+  color: var(--white);
+}
+
+.section-sub {
+  font-size: 15px;
+  color: var(--slate);
+  line-height: 1.75;
+  max-width: 560px;
+}
+
+.section-sub--light {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.3;
+  }
+}
+
+@keyframes scan {
+  0%,
+  100% {
+    width: 73%;
+  }
+  50% {
+    width: 89%;
+  }
+}
+
+.pulse {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--green);
+  animation: blink 2s ease-in-out infinite;
+}
+
+.hero-scan-fill {
+  height: 100%;
+  width: 73%;
+  background: linear-gradient(90deg, var(--green-dark), var(--green));
+  border-radius: 2px;
+  animation: scan 3s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .pulse,
+  .hero-scan-fill {
+    animation: none;
+  }
+}

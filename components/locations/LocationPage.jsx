@@ -11,7 +11,7 @@ export default function LocationPage({ slug, details }) {
       <PageHero
         label="Service Area"
         title={`Roof Inspection in ${details.name}`}
-        subtitle={`AI-powered drone roof inspections across ${details.suburbs}. Same-week availability with 24-hour report turnaround.`}
+        subtitle={`AI-assisted drone roof inspections across ${details.suburbs}. Same-week availability with 24-hour target report turnaround.`}
         dark
       />
       <Section>

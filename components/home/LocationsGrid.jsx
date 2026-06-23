@@ -18,7 +18,7 @@ export default function LocationsGrid() {
           <Link
             key={loc.slug}
             href={`/locations/${loc.slug}`}
-            className="bg-white/[0.05] border border-[var(--border-navy)] rounded-[var(--radius-md)] p-4 text-center no-underline transition-all hover:bg-[rgba(59,191,90,0.1)] hover:border-[rgba(59,191,90,0.4)]"
+            className="bg-white/[0.05] border border-[var(--border-navy)] rounded-[var(--radius-md)] p-4 text-center no-underline transition-all duration-200 hover:bg-[rgba(59,191,90,0.1)] hover:border-[rgba(59,191,90,0.4)] hover:-translate-y-0.5 focus-ring"
           >
             <div className="text-lg text-[var(--green)] mb-1.5" aria-hidden="true">
               📍

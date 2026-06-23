@@ -12,9 +12,9 @@ export default function LeadScoreSection() {
             Get your free Roof Intelligence Score
           </h2>
           <p className="section-sub section-sub--light">
-            Tell us about your property and we&apos;ll provide a preliminary
-            assessment of your roof&apos;s condition and inspection priority — at
-            no cost, no obligation.
+            Tell us about your property to register for a preliminary
+            assessment when our Roof Intelligence Score launches — at no cost,
+            no obligation.
           </p>
           <ul className="mt-6 list-none flex flex-col gap-2.5">
             {roofScoreBenefits.map((benefit) => (

@@ -6,7 +6,7 @@ import Button from "@/components/ui/Button";
 export const metadata = {
   title: "Why SpatioFos | Inspection Intelligence Platform",
   description:
-    "See how SpatioFos compares to traditional inspectors and generic drone operators. AI, GIS, and asset intelligence in one platform.",
+    "See how SpatioFos compares to traditional inspectors and drone operators. AI-assisted analysis, GIS, and structured reporting in one workflow.",
 };
 
 export default function WhySpatioFosPage() {
@@ -15,7 +15,7 @@ export default function WhySpatioFosPage() {
       <PageHero
         label="Why SpatioFos"
         title="Not just a drone operator"
-        subtitle="We combine geospatial intelligence, AI, and asset analytics — capabilities no traditional inspector or generic drone provider can offer."
+        subtitle="We combine geospatial intelligence, AI-assisted analysis, and structured reporting — built for roof and asset inspections in SEQ."
       />
       <ComparisonTable extended />
       <Section variant="light">

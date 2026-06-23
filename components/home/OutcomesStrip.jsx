@@ -4,7 +4,7 @@ export default function OutcomesStrip() {
   return (
     <section className="bg-[var(--navy)] py-12" id="outcomes" aria-label="Outcomes">
       <div className="container">
-        <p className="label label--light">Measurable outcomes</p>
+        <p className="label label--light">Service highlights</p>
         <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-3.5 mt-6">
           {outcomes.map((o) => (
             <div

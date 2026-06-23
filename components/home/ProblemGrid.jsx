@@ -16,7 +16,7 @@ export default function ProblemGrid() {
         {problems.map((p) => (
           <div
             key={p.title}
-            className="bg-white border border-[#E2EAF3] rounded-[var(--radius-md)] p-6"
+            className="card card--interactive p-6"
           >
             <div
               className="w-10 h-10 rounded-lg bg-[#FEF0F0] flex items-center justify-center text-xl mb-4"

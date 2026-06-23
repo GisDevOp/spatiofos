@@ -1,5 +1,4 @@
 import Button from "@/components/ui/Button";
-import WorkflowSteps from "@/components/home/WorkflowSteps";
 import FAQ from "@/components/product/FAQ";
 import ReportPreview from "@/components/product/ReportPreview";
 import PageHero from "@/components/ui/PageHero";
@@ -9,7 +8,7 @@ import { roofDeliverables, roofServices } from "@/lib/content";
 export const metadata = {
   title: "Roof Intelligence | SpatioFos Brisbane",
   description:
-    "AI-powered roof inspection service in Brisbane and SEQ. Drone capture, defect detection, risk scoring, GIS mapping, and 24hr PDF reports.",
+    "AI-assisted roof inspection service in Brisbane and SEQ. Drone capture, defect detection, risk scoring, GIS mapping, and PDF reports with 24hr target turnaround.",
   keywords: ["roof inspection service Brisbane", "AI defect detection roof"],
 };
 
@@ -19,7 +18,7 @@ export default function RoofIntelligencePage() {
       <PageHero
         label="Flagship Service"
         title="Roof Intelligence"
-        subtitle="AI-powered residential and commercial roof inspections with 24-hour turnaround, thermal imaging options, and insurance-ready documentation."
+        subtitle="AI-assisted residential and commercial roof inspections with 24-hour target turnaround, thermal imaging options, and insurance-structured documentation."
         dark
       >
         <div className="flex flex-wrap gap-3 mt-8">
@@ -50,10 +49,11 @@ export default function RoofIntelligencePage() {
             </div>
           ))}
         </div>
-      </Section>
-
-      <Section variant="dark">
-        <WorkflowSteps embedded />
+        <div className="mt-8">
+          <Button href="/#workflow" variant="outline">
+            See our inspection process →
+          </Button>
+        </div>
       </Section>
 
       <Section variant="light">
@@ -61,7 +61,7 @@ export default function RoofIntelligencePage() {
         <h2 className="section-title">See what you receive</h2>
         <p className="section-sub mb-8">
           Every Roof Intelligence Report includes annotated defect maps, risk
-          scoring, and GIS-referenced imagery — delivered within 24 hours.
+          scoring, and GIS-referenced imagery — with a 24-hour target turnaround.
         </p>
         <ReportPreview />
       </Section>

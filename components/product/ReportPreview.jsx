@@ -1,11 +1,13 @@
 export default function ReportPreview() {
   return (
     <div className="bg-white border border-[#E2EAF3] rounded-[var(--radius-lg)] overflow-hidden shadow-[0_4px_24px_rgba(11,30,53,0.08)]">
-      <div className="bg-[var(--navy-deep)] px-5 py-3 flex items-center justify-between">
+      <div className="bg-[var(--navy-deep)] px-5 py-3 flex items-center justify-between gap-3">
         <span className="text-[10px] font-semibold tracking-widest uppercase text-[var(--green)]">
           Sample Report Preview
         </span>
-        <span className="text-[10px] text-white/40">Roof Intelligence Report</span>
+        <span className="text-[10px] text-white/45 text-right">
+          Illustrative data — not from a live inspection
+        </span>
       </div>
       <div className="grid md:grid-cols-2 gap-0">
         <div className="bg-[var(--offwhite)] p-6 min-h-[200px] relative">
@@ -22,19 +24,19 @@ export default function ReportPreview() {
             <div className="absolute bottom-10 left-1/3 w-3 h-3 rounded-full bg-[rgba(59,191,90,0.3)] border-2 border-[#7EE09A]" />
           </div>
           <p className="absolute bottom-3 left-6 text-[10px] text-[var(--muted)]">
-            GIS defect overlay map
+            Example GIS defect overlay map
           </p>
         </div>
         <div className="p-6">
           <div className="mb-4">
             <div className="text-[10px] text-[var(--muted)] uppercase tracking-wide mb-1">
-              Overall Risk Score
+              Example Risk Score
             </div>
             <div className="font-display text-4xl font-bold text-[var(--green-dark)]">
               72<span className="text-lg text-[var(--muted)]">/100</span>
             </div>
-            <div className="text-xs text-[#856404] font-medium mt-1">
-              Moderate — maintenance recommended within 6 months
+            <div className="text-xs text-[var(--slate)] font-medium mt-1">
+              Sample rating — actual scores vary by property
             </div>
           </div>
           <div className="space-y-2 border-t border-[#EEF3F8] pt-4">
@@ -42,7 +44,7 @@ export default function ReportPreview() {
               { label: "Critical defects", value: "1" },
               { label: "Moderate defects", value: "3" },
               { label: "Low priority", value: "2" },
-              { label: "Report turnaround", value: "24hr" },
+              { label: "Target turnaround", value: "24hr" },
             ].map((row) => (
               <div
                 key={row.label}

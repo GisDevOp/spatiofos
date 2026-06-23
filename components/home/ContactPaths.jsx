@@ -46,7 +46,7 @@ export default function ContactPaths() {
         {paths.map((path) => (
           <div
             key={path.title}
-            className="bg-[var(--offwhite)] rounded-[var(--radius-lg)] p-7"
+            className="bg-[var(--offwhite)] rounded-[var(--radius-lg)] p-7 border border-transparent hover:border-[rgba(59,191,90,0.25)] hover:shadow-[var(--shadow-sm)] transition-all duration-200"
           >
             <div className="text-[28px] mb-3" aria-hidden="true">
               {path.icon}

@@ -1,10 +1,12 @@
+import { site } from "@/lib/content";
+
 export default function LocalBusinessSchema({ location, slug }) {
   const schema = {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     name: "SpatioFos",
-    description: `AI-powered roof inspection in ${location}`,
-    url: `https://spatiofos.com.au/locations/${slug}`,
+    description: `AI-assisted roof inspection in ${location}`,
+    url: `${site.url}/locations/${slug}`,
     areaServed: {
       "@type": "City",
       name: location,

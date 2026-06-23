@@ -21,14 +21,13 @@ export default function AboutPage() {
           <p>
             SpatioFos combines GIS expertise, drone operations, AWS cloud
             architecture, and planning background to deliver inspection
-            intelligence that traditional providers cannot match. This
-            founder-market fit is uncommon in the inspection industry.
+            intelligence for roof and asset workflows across SEQ.
           </p>
           <p>
-            We operate under the Inspection Intelligence Capture Standard
-            (IICS) — ensuring repeatable data quality, AI-ready capture,
-            geospatial integrity with RTK and GDA2020, and enterprise-grade
-            auditability on every inspection.
+            We operate under the SpatioFos Capture Methodology — our internal
+            standard for repeatable data quality, AI-ready capture, geospatial
+            integrity with RTK and GDA2020, and auditable field workflows on
+            every inspection.
           </p>
           <p>
             Launching in South East Queensland, we serve Brisbane, Gold Coast,

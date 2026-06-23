@@ -36,7 +36,20 @@ yarn-error.log*
 .pnpm-debug.log*
 
 # env files
-.env*.local
+.env
+.env.*
+!.env.example
+
+# branding & confidential assets (local only)
+/branding-kit/
+/spatiofos-branding-kit.zip
+/confidential/
+/private/
+/secrets/
+*.key
+*.pem.local
+credentials.json
+credentials.*.json
 
 # vercel
 .vercel

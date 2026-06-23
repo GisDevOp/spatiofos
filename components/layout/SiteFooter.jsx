@@ -57,6 +57,8 @@ export default function SiteFooter() {
             <Link href="/get-roof-score" className="block text-[13px] text-white/55 no-underline mb-2 hover:text-white transition-colors">Free Roof Score</Link>
             <Link href="/contact" className="block text-[13px] text-white/55 no-underline mb-2 hover:text-white transition-colors">Contact</Link>
             <Link href="/app" className="block text-[13px] text-white/55 no-underline mb-2 hover:text-white transition-colors">Client Portal</Link>
+            <Link href="/privacy" className="block text-[13px] text-white/55 no-underline mb-2 hover:text-white transition-colors">Privacy</Link>
+            <Link href="/terms" className="block text-[13px] text-white/55 no-underline mb-2 hover:text-white transition-colors">Terms</Link>
           </div>
         </div>
         <div className="border-t border-[var(--border-navy)] pt-6 flex flex-wrap items-center justify-between gap-4">

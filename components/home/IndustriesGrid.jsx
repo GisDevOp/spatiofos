@@ -14,7 +14,7 @@ export default function IndustriesGrid() {
         {industries.map((ind) => (
           <div
             key={ind.title}
-            className="bg-white border border-[#E2EAF3] rounded-[var(--radius-lg)] p-7"
+            className="card card--lg card--interactive p-7"
           >
             <div className="text-[22px] mb-4" aria-hidden="true">
               {ind.icon}

@@ -2,11 +2,15 @@ import Section from "@/components/ui/Section";
 import { comparisonRows } from "@/lib/content";
 
 function Cell({ value }) {
-  return value ? (
-    <span className="text-[var(--green-dark)] font-bold text-[15px]">✓</span>
-  ) : (
-    <span className="text-[#CCD6E0] text-[15px]">—</span>
-  );
+  if (value === true) {
+    return <span className="text-[var(--green-dark)] font-bold text-[15px]">✓</span>;
+  }
+  if (value === "partial") {
+    return (
+      <span className="text-[var(--slate)] text-[11px] font-medium">Varies</span>
+    );
+  }
+  return <span className="text-[#CCD6E0] text-[15px]">—</span>;
 }
 
 export default function ComparisonTable({ extended = false }) {
@@ -15,16 +19,15 @@ export default function ComparisonTable({ extended = false }) {
       <p className="label">Why SpatioFos</p>
       <h2 className="section-title">Not just a drone operator</h2>
       <p className="section-sub">
-        We combine geospatial intelligence, AI, and asset analytics. Capabilities
-        no traditional inspector or generic drone provider can offer.
+        We combine geospatial intelligence, AI-assisted analysis, and structured
+        reporting — designed for roof and asset inspections across SEQ.
       </p>
       {extended && (
         <p className="text-sm text-[var(--slate)] mt-6 max-w-2xl leading-relaxed">
           SpatioFos was founded at the intersection of GIS, drone operations, and
-          enterprise architecture — a combination uncommon in the inspection
-          industry. We&apos;re building the spatial infrastructure intelligence
-          platform for the built environment, starting with roof intelligence in
-          South East Queensland.
+          enterprise architecture. We&apos;re building inspection intelligence for
+          the built environment, starting with roof intelligence in South East
+          Queensland.
         </p>
       )}
       <div className="overflow-x-auto mt-8">
@@ -65,6 +68,12 @@ export default function ComparisonTable({ extended = false }) {
           </tbody>
         </table>
       </div>
+      <p className="text-[11px] text-[var(--muted)] mt-4 max-w-2xl leading-relaxed">
+        Comparison reflects typical service inclusions, not every provider.
+        &ldquo;Varies&rdquo; means some operators offer this depending on scope,
+        equipment, and deliverables. Platform features marked &ldquo;Varies&rdquo;
+        for SpatioFos are on our roadmap or available on selected tiers.
+      </p>
     </Section>
   );
 }

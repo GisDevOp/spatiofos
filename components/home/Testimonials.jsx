@@ -1,23 +1,23 @@
 import Section from "@/components/ui/Section";
-import { testimonials } from "@/lib/content";
+import { showTestimonials, testimonials } from "@/lib/content";
 
 export default function Testimonials() {
+  if (!showTestimonials) return null;
+
   return (
     <Section id="testimonials">
       <p className="label">Client stories</p>
-      <h2 className="section-title">
-        Trusted by homeowners, strata managers, and insurers
-      </h2>
+      <h2 className="section-title">What our clients say</h2>
       <div className="grid md:grid-cols-3 gap-4.5 mt-10">
         {testimonials.map((t) => (
           <div
             key={t.initials}
-            className="bg-white border border-[#E2EAF3] rounded-[var(--radius-lg)] p-6"
+            className="card card--lg card--interactive p-6 h-full flex flex-col"
           >
             <div className="text-[var(--green)] text-sm mb-3" aria-label="5 stars">
               ★★★★★
             </div>
-            <p className="text-sm text-[var(--navy)] leading-relaxed italic mb-4">
+            <p className="text-sm text-[var(--navy)] leading-relaxed italic mb-4 flex-1">
               &ldquo;{t.quote}&rdquo;
             </p>
             <div className="flex items-center gap-2.5">

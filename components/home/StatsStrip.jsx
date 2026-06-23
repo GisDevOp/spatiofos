@@ -7,9 +7,9 @@ export default function StatsStrip() {
       aria-label="Key statistics"
     >
       <div className="container">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-0 md:divide-x md:divide-[var(--green-mid)] text-center">
           {stats.map((stat) => (
-            <div key={stat.label}>
+            <div key={stat.label} className="px-2 md:px-4">
               <div className="font-display text-[28px] font-bold text-[var(--green-dark)]">
                 {stat.value}
               </div>

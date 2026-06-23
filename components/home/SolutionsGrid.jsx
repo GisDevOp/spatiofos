@@ -16,7 +16,7 @@ export default function SolutionsGrid() {
           <Link
             key={sol.slug}
             href={sol.href}
-            className="bg-white border border-[#E2EAF3] rounded-[var(--radius-lg)] p-7 no-underline transition-all hover:border-[var(--green)] hover:shadow-[0_4px_20px_rgba(59,191,90,0.1)]"
+            className="bg-white border border-[#E2EAF3] rounded-[var(--radius-lg)] p-7 no-underline transition-all duration-200 hover:border-[var(--green)] hover:shadow-[var(--shadow-card)] hover:-translate-y-0.5 focus-ring"
           >
             {sol.flagship && (
               <span className="inline-block text-[10px] font-bold bg-[var(--green)] text-white px-2.5 py-0.5 rounded mb-3">

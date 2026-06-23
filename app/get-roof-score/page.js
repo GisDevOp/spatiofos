@@ -6,7 +6,7 @@ import { roofScoreBenefits } from "@/lib/content";
 export const metadata = {
   title: "Free Roof Intelligence Score | SpatioFos Brisbane",
   description:
-    "Get a free preliminary roof condition assessment for your SEQ property. No obligation. AI-powered Roof Intelligence Score.",
+    "Register for a preliminary roof condition assessment for your SEQ property. No obligation. Roof Intelligence Score launching soon.",
   keywords: ["free roof assessment Brisbane", "roof intelligence score"],
 };
 
@@ -16,7 +16,7 @@ export default function GetRoofScorePage() {
       <PageHero
         label="Free Assessment"
         title="Get your free Roof Intelligence Score"
-        subtitle="Tell us about your property and receive a preliminary condition assessment — at no cost, no obligation."
+        subtitle="Register your property for a preliminary assessment when the Roof Intelligence Score launches — at no cost, no obligation."
       />
       <Section variant="light">
         <div className="grid lg:grid-cols-2 gap-12 items-start max-w-4xl mx-auto">

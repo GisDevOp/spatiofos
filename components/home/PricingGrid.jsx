@@ -1,8 +1,24 @@
+"use client";
+
 import Link from "next/link";
 import Section from "@/components/ui/Section";
 import { pricingTiers } from "@/lib/content";
+import { trackEvent } from "@/lib/analytics";
 
 export default function PricingGrid({ showNote = true }) {
+  function handleTierClick(tier) {
+    if (tier.status !== "active") return;
+    trackEvent("booking_click", {
+      tier_id: tier.id,
+      tier_name: tier.tier,
+      price: tier.launchPrice,
+    });
+    trackEvent("select_item", {
+      item_list_name: "pricing",
+      items: [{ item_id: tier.id, item_name: tier.tier, price: tier.launchPrice }],
+    });
+  }
+
   return (
     <Section id="pricing" variant="light">
       <p className="label">Pricing</p>
@@ -16,11 +32,11 @@ export default function PricingGrid({ showNote = true }) {
         {pricingTiers.map((tier) => (
           <div
             key={tier.id}
-            className={`bg-white border rounded-[var(--radius-lg)] p-7 ${
+            className={`card card--lg p-7 h-full flex flex-col ${
               tier.featured
-                ? "border-2 border-[var(--green)] shadow-[0_6px_30px_rgba(59,191,90,0.12)]"
-                : "border-[#E2EAF3]"
-            } ${tier.status === "coming-soon" ? "opacity-75" : ""}`}
+                ? "border-2 border-[var(--green)] shadow-[0_6px_30px_rgba(59,191,90,0.12)] md:scale-[1.02] z-[1]"
+                : ""
+            } ${tier.status === "coming-soon" ? "opacity-75" : "card--interactive"}`}
           >
             {tier.status === "active" ? (
               <div className="inline-flex items-center gap-1.5 bg-[#FFF3CD] border border-[#FFD96650] text-[#856404] text-[11px] font-semibold px-2.5 py-0.5 rounded-full mb-3">
@@ -63,7 +79,7 @@ export default function PricingGrid({ showNote = true }) {
             <p className="text-[13px] text-[var(--slate)] my-4 leading-relaxed">
               {tier.description}
             </p>
-            <ul className="list-none border-t border-[#EEF3F8] pt-4">
+            <ul className="list-none border-t border-[#EEF3F8] pt-4 flex-1">
               {tier.features.map((f) => (
                 <li
                   key={f}
@@ -78,17 +94,18 @@ export default function PricingGrid({ showNote = true }) {
             </ul>
             <Link
               href={tier.ctaHref}
-              className={`block w-full mt-6 py-2.5 rounded-[var(--radius-sm)] text-sm font-semibold text-center no-underline transition-opacity hover:opacity-85 ${
+              onClick={() => handleTierClick(tier)}
+              className={`block w-full mt-6 py-2.5 rounded-[var(--radius-sm)] text-sm font-semibold text-center no-underline transition-all duration-200 focus-ring ${
                 tier.status === "active"
-                  ? "bg-[var(--green)] text-white"
-                  : "bg-transparent text-[var(--navy)] border-[1.5px] border-[#CBD5E0]"
+                  ? "bg-[var(--green)] text-white hover:bg-[var(--green-dark)] hover:shadow-[0_4px_14px_rgba(59,191,90,0.35)]"
+                  : "bg-transparent text-[var(--navy)] border-[1.5px] border-[#CBD5E0] hover:border-[var(--green)] hover:bg-[var(--green-pale)]"
               }`}
             >
               {tier.cta}
             </Link>
             {tier.status === "active" && (
-              <p className="text-[11px] text-[#856404] mt-1.5 font-medium">
-                ⏱ Launch pricing available to first 50 bookings
+              <p className="text-[11px] text-[var(--muted)] mt-1.5 font-medium">
+                Launch pricing for early residential bookings
               </p>
             )}
           </div>

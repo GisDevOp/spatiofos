@@ -5,7 +5,6 @@ import WorkflowSteps from "@/components/home/WorkflowSteps";
 import OutcomesStrip from "@/components/home/OutcomesStrip";
 import SolutionsGrid from "@/components/home/SolutionsGrid";
 import ComparisonTable from "@/components/home/ComparisonTable";
-import Testimonials from "@/components/home/Testimonials";
 import PricingGrid from "@/components/home/PricingGrid";
 import IndustriesGrid from "@/components/home/IndustriesGrid";
 import LocationsGrid from "@/components/home/LocationsGrid";
@@ -22,7 +21,6 @@ export default function HomePage() {
       <OutcomesStrip />
       <SolutionsGrid />
       <ComparisonTable />
-      <Testimonials />
       <PricingGrid />
       <IndustriesGrid />
       <LocationsGrid />

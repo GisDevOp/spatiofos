@@ -1,7 +1,7 @@
-import { sitemapRoutes } from "@/lib/content";
+import { site, sitemapRoutes } from "@/lib/content";
 
 export default function sitemap() {
-  const baseUrl = "https://spatiofos.com.au";
+  const baseUrl = site.url;
 
   return sitemapRoutes.map((route) => ({
     url: `${baseUrl}${route}`,
